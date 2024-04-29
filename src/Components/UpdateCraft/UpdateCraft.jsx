@@ -24,7 +24,6 @@ const UpdateCraft = () => {
     const { itemName, subName, customization, description, photo, price, rating, stockstatus, time } = craft;
     console.log(price, time);
 
-
     const handleUpdate = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -150,11 +149,12 @@ const UpdateCraft = () => {
                             <div className='flex flex-col md:flex-row w-full mb-3 gap-4 md:gap-8'>
                                 <label className="block w-full">
                                     <span className="mb-1 text-lg font-semibold">Customization </span>
+                                    
                                     <input
                                         type="text"
                                         name='customization'
                                         defaultValue={customization}
-                                        placeholder="Customization "
+                                        placeholder="Customization: 'Yea' or 'No'"
                                         required
                                         className="block w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1"
                                     />
