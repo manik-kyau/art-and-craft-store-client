@@ -11,11 +11,10 @@ const SubCategory = ({ craft }) => {
             <div className="card card-compact bg-base-100 border hover:shadow-xl rounded-lg mt-10">
                 <img src={photo} className="h-[300px] rounded-t-md" alt="Shoes" />
                 <div className="card-body">
-                    <h2 className="text-3xl font-bold">{itemName}</h2>
+                    <h2 className="text-3xl font-bold">{itemName.slice(0,20)}</h2>
                     <p className="text-2xl font-medium">{subName}</p>
                     <p className="text-base font-medium">{description.slice(0, 200)}</p>
                     {/*  */}
-                    {/* yujy */}
                     <div className="space-y-4 mt-2">
                         <h2 className="text-base font-medium"><span className="text-base font-bold mr-1">Stock Status:</span> {stockstatus}</h2>
                         <h2 className="text-base font-medium"><span className="text-base font-bold mr-1">Customization:</span> {customization}</h2>

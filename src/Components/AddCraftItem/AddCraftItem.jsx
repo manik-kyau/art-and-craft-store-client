@@ -111,8 +111,8 @@ const AddCraftItem = () => {
                                     <span className="mb-1 text-lg font-semibold">Customization </span>
                                     <select className='text-base w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1' name="customization" id="" onChange={handleCustomization}>
                                         <option className='bg-white text-black' value="">Customization</option>
-                                        <option className='bg-white text-black' value="Customization Yes"> Yes</option>
-                                        <option className='bg-white text-black' value="Customization No"> No</option>
+                                        <option className='bg-white text-black' value="Yes"> Yes</option>
+                                        <option className='bg-white text-black' value="No"> No</option>
                                     </select>
                                     {/* <input type="text" name='customization' placeholder="Customization " required className="block w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1" /> */}
                                 </label>
@@ -120,8 +120,8 @@ const AddCraftItem = () => {
                                     <span className="mb-1 text-lg font-semibold">Stock Status</span>
                                     <select className='text-base w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1' name="stockstatus" id="" onChange={handleStock}>
                                         <option className='bg-white text-black' value="">Stock Status</option>
-                                        <option className='bg-white text-black' value="Customization Yes">In stock</option>
-                                        <option className='bg-white text-black' value="Customization No">Made to Order</option>
+                                        <option className='bg-white text-black' value="In stock">In stock</option>
+                                        <option className='bg-white text-black' value="Made to Order">Made to Order</option>
                                     </select>
 
                                     {/* <input type="text" name='stockstatus' placeholder="Stock Status" required className="block w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1" /> */}

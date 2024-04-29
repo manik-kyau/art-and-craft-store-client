@@ -15,7 +15,7 @@ const CraftCard = ({ craft }) => {
                 <div className=" px-6 py-7">
                     <div className="space-y-4">
                         <div className="text-center">
-                            <h2 className="text-3xl text-center font-bold"> {itemName}</h2>
+                            <h2 className="text-3xl text-center font-bold"> {itemName.slice(0,20)}</h2>
                             <h2 className="text-lg font-semibold mt-4"> {description.slice(0,100)}</h2>
                         </div>
 

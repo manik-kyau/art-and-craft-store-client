@@ -59,7 +59,7 @@ const MyArtAndCraftList = () => {
             <Fade direction='right'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 my-10'>
                     {
-                        remaining.map((craft, idx) => <AddMyCraft
+                        remaining .map((craft, idx) => <AddMyCraft
                             key={idx}
                             craft={craft}
                             crafts={crafts}
