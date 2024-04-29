@@ -5,10 +5,14 @@ import { Helmet } from 'react-helmet-async';
 import { Fade } from 'react-awesome-reveal';
 
 const MyArtAndCraftList = () => {
+    
+        const handleChange = (event) => {
+          console.log(event.target.value);
+        };
 
     const { user } = useContext(AuthContext);
     const [crafts, setCrafts] = useState([]);
-    const[userCraft, setUserCraft] =useState()
+    const [userCraft, setUserCraft] = useState()
 
     useEffect(() => {
         fetch(`http://localhost:5000/myArtAndCraft/${user?.userEmail}`)
@@ -20,7 +24,7 @@ const MyArtAndCraftList = () => {
 
     // filter single user art
     const remaining = crafts.filter(craf => craf.userEmail == user.email);
-    setUserCraft(remaining)
+    // setUserCraft(remaining)
 
     // const handleCustomization = (e) => {
     //     console.log(e.target.value);
@@ -38,11 +42,18 @@ const MyArtAndCraftList = () => {
             </Fade>
             <Fade cascade damping={0.2}>
                 <div className='flex justify-center py-4'>
-                    <select className='text-xl font-semibold bg-[#23BE0A] px-3 py-3 rounded-md text-white outline-none' name="" id="">
+                    <select className='text-xl font-semibold bg-[#23BE0A] px-3 py-3 rounded-md text-white outline-none' name="" id="" onChange={handleChange}>
+                        <option className='bg-white text-black' value="">Customization</option>
+                        <option className='bg-white text-black' value="Customization Yes">Customization Yes</option>
+                        <option className='bg-white text-black' value="Customization No">Customization No</option>
+                    </select>
+
+
+                    {/* <select className='text-xl font-semibold bg-[#23BE0A] px-3 py-3 rounded-md text-white outline-none' name="" id="">
                         <option className='bg-white text-black ' value=" ">Customization</option>
                         <option className='bg-white text-black ' value="">Customization Yes</option>
                         <option className='bg-white text-black' value="">Customization No</option>
-                    </select>
+                    </select> */}
                 </div>
             </Fade>
             <Fade direction='right'>
