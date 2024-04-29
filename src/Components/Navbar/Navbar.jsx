@@ -33,7 +33,7 @@ const Navbar = () => {
         {
             user && <li><NavLink to='/contact'
                 className={({ isActive }) => isActive ? "text-[#23BE0A] font-bold text-lg bg-white WorkSans hover:text-[#23BE0A]" : "text-lg font-bold WorkSans text-[#131313cc] hover:text-white hover:bg-[#23BE0A]"}
-            >Contact</NavLink></li>
+            >Contact Us</NavLink></li>
         }
 
     </>

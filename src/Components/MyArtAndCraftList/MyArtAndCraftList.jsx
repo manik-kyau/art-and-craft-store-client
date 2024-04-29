@@ -5,10 +5,6 @@ import { Helmet } from 'react-helmet-async';
 import { Fade } from 'react-awesome-reveal';
 
 const MyArtAndCraftList = () => {
-    
-        const handleChange = (event) => {
-          console.log(event.target.value);
-        };
 
     const { user } = useContext(AuthContext);
     const [crafts, setCrafts] = useState([]);
@@ -26,9 +22,11 @@ const MyArtAndCraftList = () => {
     const remaining = crafts.filter(craf => craf.userEmail == user.email);
     // setUserCraft(remaining)
 
-    // const handleCustomization = (e) => {
-    //     console.log(e.target.value);
-    // }
+    const handleChange = (event) => {
+        // console.log(event.target.value);
+        const customize = event.target.value;
+        
+      };
 
     return (
         <div>
@@ -47,13 +45,6 @@ const MyArtAndCraftList = () => {
                         <option className='bg-white text-black' value="Customization Yes">Customization Yes</option>
                         <option className='bg-white text-black' value="Customization No">Customization No</option>
                     </select>
-
-
-                    {/* <select className='text-xl font-semibold bg-[#23BE0A] px-3 py-3 rounded-md text-white outline-none' name="" id="">
-                        <option className='bg-white text-black ' value=" ">Customization</option>
-                        <option className='bg-white text-black ' value="">Customization Yes</option>
-                        <option className='bg-white text-black' value="">Customization No</option>
-                    </select> */}
                 </div>
             </Fade>
             <Fade direction='right'>
