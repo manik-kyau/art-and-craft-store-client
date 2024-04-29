@@ -8,7 +8,6 @@ const MyArtAndCraftList = () => {
 
     const { user } = useContext(AuthContext);
     const [crafts, setCrafts] = useState([]);
-    const [userCraft, setUserCraft] = useState()
 
     useEffect(() => {
         fetch(`http://localhost:5000/myArtAndCraft/${user?.userEmail}`)

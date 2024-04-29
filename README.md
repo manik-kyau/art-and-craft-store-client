@@ -1,8 +1,21 @@
-# React + Vite
+# ArtCallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to our Art & Craft Store! We're dedicated to providing a vibrant and inspiring space for artists, crafters, and DIY enthusiasts alike. Whether you're a seasoned creator or just starting out, we have everything you need to bring your imagination to life.
 
-Currently, two official plugins are available:
+The following feature are alailable in ArtGallery Project:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Home Page](http://localhost:5173/) : Frist this site will have Home Page. There will be banner section,Art And Craft,Gallery section,Team section.
+- [All Art&Craft Page](http://localhost:5173/allArt&Craft) : Information on all Art Art&Craft on this page will be in the form of a table.
+- [AddCraftItem Page](http://localhost:5173/addCraft) : A user can add his Art&Craft related information through this page.
+- [Update Art&Craft Page](http://localhost:5173/updateCraft/662fa57efd735c97cbb4936f) : A user can update his Art&Craft info through this page.
+- [My Art&Craft Page](http://localhost:5173/myArt) : A user can see all this added art on this page.
+
+Category name is "Painting and Drawing"
+
+
+### Project Live Link :
+
+
+### Used Packages for the challenges task.
+- [Lottie React](https://www.npmjs.com/package/lottie-react),
+- [react Awesome Reveal](https://www.npmjs.com/package/react-awesome-reveal)
