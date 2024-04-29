@@ -13,7 +13,10 @@ const AddCraftItem = () => {
 
     const handleCustomization = (event) => {
         console.log(event.target.value);
-      };
+    };
+    const handleStock = (event) => {
+        console.log(event.target.value);
+    };
 
     const handleAddCraft = (e) => {
         e.preventDefault();
@@ -106,7 +109,7 @@ const AddCraftItem = () => {
                             <div className='flex flex-col md:flex-row w-full mb-3 gap-4 md:gap-8'>
                                 <label className="block w-full">
                                     <span className="mb-1 text-lg font-semibold">Customization </span>
-                                    <select className=' w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1' name="customization" id="" onChange={handleCustomization}>
+                                    <select className='text-base w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1' name="customization" id="" onChange={handleCustomization}>
                                         <option className='bg-white text-black' value="">Customization</option>
                                         <option className='bg-white text-black' value="Customization Yes"> Yes</option>
                                         <option className='bg-white text-black' value="Customization No"> No</option>
@@ -115,7 +118,13 @@ const AddCraftItem = () => {
                                 </label>
                                 <label className="block w-full">
                                     <span className="mb-1 text-lg font-semibold">Stock Status</span>
-                                    <input type="text" name='stockstatus' placeholder="Stock Status" required className="block w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1" />
+                                    <select className='text-base w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1' name="stockstatus" id="" onChange={handleStock}>
+                                        <option className='bg-white text-black' value="">Stock Status</option>
+                                        <option className='bg-white text-black' value="Customization Yes">In stock</option>
+                                        <option className='bg-white text-black' value="Customization No">Made to Order</option>
+                                    </select>
+
+                                    {/* <input type="text" name='stockstatus' placeholder="Stock Status" required className="block w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1" /> */}
                                 </label>
                             </div>
                             <div>
