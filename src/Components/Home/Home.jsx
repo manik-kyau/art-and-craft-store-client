@@ -28,7 +28,7 @@ const Home = () => {
                         <Fade direction='left'>
                             <div className='text-center space-y-4'>
                                 <h2 className='text-[40px] font-bold'>A Collection of Artisanal Creations</h2>
-                                <p className='w-2/3 mx-auto text-base font-semibold'>Indulge in the timeless charm of our artisanal creations, meticulously crafted to perfection. Each piece in our collection embodies the essence of artisanal skill and creativity, showcasing the beauty of handcrafted artistry. From intricately designed jewelry to exquisitely woven textiles, every item tells a story of dedication, passion, and craftsmanship.</p>
+                                <p className='w-full md:w-2/3 mx-auto text-base font-semibold'>Indulge in the timeless charm of our artisanal creations, meticulously crafted to perfection. Each piece in our collection embodies the essence of artisanal skill and creativity, showcasing the beauty of handcrafted artistry. From intricately designed jewelry to exquisitely woven textiles, every item tells a story of dedication, passion, and craftsmanship.</p>
                             </div>
                         </Fade>
                         <Fade direction='right'>
@@ -44,38 +44,16 @@ const Home = () => {
                                 <Fade direction='right'>
                                     <div className='text-center space-y-4'>
                                         <h2 className='text-[40px] font-bold'>SubCategory</h2>
-                                        <p className='w-2/3 mx-auto text-base font-semibold'>Indulge in the timeless charm of our artisanal creations, meticulously crafted to perfection. Each piece in our collection embodies the essence of artisanal skill and creativity, showcasing the beauty of handcrafted artistry. From intricately designed jewelry to exquisitely woven textiles, every item tells a story of dedication, passion, and craftsmanship.</p>
+                                        <p className='w-full md:w-2/3 mx-auto text-base font-semibold'>
+                                            An Art & Craft Store is a sanctuary for creative souls, offering a diverse array of supplies and resources to fuel artistic endeavors. Stepping into one, you're enveloped in a vibrant atmosphere, where every corner teems with color, texture, and inspiration. These stores boast an extensive selection of high-quality materials and tools, catering to various artistic pursuits such as painting, drawing, sculpting, knitting, and jewelry making.</p>
                                     </div>
                                 </Fade>
                             </div>
                             <Fade direction='left'>
-                                <div className="flex flex-col lg:flex-row  mb-8">
-                                    <Swiper
-                                        breakpoints={{
-                                            340: {
-                                                slidesPerView: 1,
-                                                spaceBetween: 16
-                                            },
-                                            768: {
-                                                slidesPerView: 2,
-                                                spaceBetween: 20
-                                            },
-                                            1280: {
-                                                slidesPerView: 3,
-                                                spaceBetween: 30
-                                            }
-                                        }}
-                                        freeMode={true}
-                                        pagination={{
-                                            clickable: true
-                                        }}
-                                        modules={[FreeMode, Pagination]}
-                                        className='w-[100%]'
-                                    >
-                                        {
-                                            loadedCraft.slice(0, 6).map((craft, idx) => <SwiperSlide key={idx} className="flex justify-center"><div className="flex flex-col gap-6 mb-12 group"><SubCategory craft={craft}></SubCategory></div></SwiperSlide>)
-                                        }
-                                    </Swiper>
+                                <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-5 mb-8">
+                                    {
+                                        loadedCraft.slice(0, 6).map((craft, idx) => <SubCategory key={idx} craft={craft}></SubCategory>)
+                                    }
                                 </div>
                             </Fade>
                         </div>
