@@ -3,28 +3,35 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import AddMyCraft from '../AddMyCraft/AddMyCraft';
 import { Helmet } from 'react-helmet-async';
 import { Fade } from 'react-awesome-reveal';
+import Select from 'react-select'
 
 const MyArtAndCraftList = () => {
 
     const { user } = useContext(AuthContext);
+    console.log(user.email);
     const [crafts, setCrafts] = useState([]);
+    const [selactCustomization, setSelectCustomization] = useState(null);
 
     useEffect(() => {
         fetch(`https://art-and-craft-store-server-delta.vercel.app/myArtAndCraft/${user?.userEmail}`)
             .then(res => res.json())
             .then(data => {
-                setCrafts(data);
+                const remaining = data.filter(craf => craf.userEmail == user.email);
+                console.log(remaining);
+                setCrafts(remaining);
             })
     }, [user])
 
-    // filter single user art
-    const remaining = crafts.filter(craf => craf.userEmail == user.email);
+    const customizations = Array.from(
+        new Set(crafts.map((res) => res.customization))
+    )
 
-    const handleChange = (event) => {
-        // console.log(event.target.value);
-        const customize = event.target.value;
-        
-      };
+    const customizationOptions = customizations.map((customization) => ({
+        value: customization,
+        label: customization
+    }))
+
+    const filterCrafts = selactCustomization ? crafts.filter((craf) => craf.customization === selactCustomization.value) : crafts;
 
     return (
         <div>
@@ -37,24 +44,31 @@ const MyArtAndCraftList = () => {
                 </div>
             </Fade>
             <Fade cascade damping={0.2}>
-                <div className='flex justify-center py-4'>
-                    <select className='text-xl font-semibold bg-[#23BE0A] px-3 py-3 rounded-md text-white outline-none' name="" id="" onChange={handleChange}>
-                        <option className='bg-white text-black' value="">Customization</option>
-                        <option className='bg-white text-black' value="Customization Yes">Customization Yes</option>
-                        <option className='bg-white text-black' value="Customization No">Customization No</option>
-                    </select>
+                <div className='flex justify-center relative py-4 pb-10 z-12'>
+
+                    <Select
+                        options={customizationOptions}
+                        isClearable
+                        placeholder='select Customization'
+                        onChange={(selectOption) => setSelectCustomization(selectOption)}
+                        value={selactCustomization}
+                        className='min-w-[250px] h-8'
+                    >
+                    </Select>
                 </div>
             </Fade>
             <Fade direction='right'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 my-10'>
-                    {
-                        remaining .map((craft, idx) => <AddMyCraft
-                            key={idx}
-                            craft={craft}
-                            crafts={crafts}
-                            setCrafts={setCrafts}
-                        ></AddMyCraft>)
-                    }
+                <div >
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 my-14'>
+                        {
+                            filterCrafts.map((craft, idx) => <AddMyCraft
+                                key={idx}
+                                craft={craft}
+                                crafts={crafts}
+                                setCrafts={setCrafts}
+                            ></AddMyCraft>)
+                        }
+                    </div>
                 </div>
             </Fade>
         </div>
