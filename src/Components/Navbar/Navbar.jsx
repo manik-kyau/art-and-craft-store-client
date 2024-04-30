@@ -4,7 +4,12 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import User from '../../assets/images/user.png'
 
 const Navbar = () => {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState('light');
+    useEffect(()=>{
+        localStorage.setItem('theme',theme)
+        const localTheme = localStorage.getItem('theme')
+        document.querySelector('html').setAttribute('data-theme',localTheme)
+    },[theme]);
 
     const { user, logOut } = useContext(AuthContext);
 
@@ -38,12 +43,6 @@ const Navbar = () => {
 
     </>
 
-    useEffect(()=>{
-        localStorage.setItem('theme',theme)
-        const localTheme = localStorage.getItem('theme')
-        document.querySelector('html').setAttribute('data-theme',localTheme)
-    },[theme]);
-
     const handleLogOut = () => {
         logOut()
             .then(result => {
@@ -54,13 +53,13 @@ const Navbar = () => {
 
     const handleToggle = e => {
         if (e.target.checked) {
-            setTheme('dark');
+            setTheme('retro');
         }
         else {
             setTheme('light');
         }
     }
-    // console.log(theme);
+
     return (
         <div>
             <div className="navbar justify-between bg-base-100 mt-8 px-0">
