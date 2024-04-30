@@ -7,11 +7,11 @@ import { IoArrowForward } from "react-icons/io5";
 
 const CraftCard = ({ craft }) => {
     // console.log(craft);
-    const { _id, itemName, subName, customization,description, photo, price, rating, stockstatus, time } = craft;
+    const { _id, itemName,description, photo, price, rating, time } = craft;
     return (
         <div>
             <div className=" hover:shadow-xl">
-                <img src={photo} className="h-[450px] w-full" alt="Shoes" />
+                <img src={photo} className="h-[450px] rounded-sm w-full" alt="Shoes" />
                 <div className=" px-6 py-7">
                     <div className="space-y-4">
                         <div className="text-center">
