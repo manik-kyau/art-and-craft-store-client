@@ -78,7 +78,7 @@ const Register = () => {
                 // user Add in MongoDB
                 const createdAt = result.user?.metadata?.creationTime;
                 const user = { name, email, photo, password, createdAt: createdAt }
-                fetch('http://localhost:5000/users', {
+                fetch('https://art-and-craft-store-server-delta.vercel.app/users', {
                     method: "POST",
                     headers: {
                         "content-type": "application/json"

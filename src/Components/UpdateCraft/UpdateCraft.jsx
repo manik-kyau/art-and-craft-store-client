@@ -13,7 +13,7 @@ const UpdateCraft = () => {
     const [craft, setCraft] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleCraft/${id}`)
+        fetch(`https://art-and-craft-store-server-delta.vercel.app/singleCraft/${id}`)
             .then(res => res.json())
             .then(data => {
                 setCraft(data)
@@ -38,7 +38,7 @@ const UpdateCraft = () => {
         const customization = form.customization.value;
         const craft = { itemName, subName, photo, description, price, rating, time, stockstatus, customization }
 
-        fetch(`http://localhost:5000/updateCraft/${id}`, {
+        fetch(`https://art-and-craft-store-server-delta.vercel.app/updateCraft/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

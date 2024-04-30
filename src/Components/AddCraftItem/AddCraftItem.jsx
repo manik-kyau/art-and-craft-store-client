@@ -36,7 +36,7 @@ const AddCraftItem = () => {
         console.log(craft);
 
         // send data to the server
-        fetch('http://localhost:5000/crafts', {
+        fetch('https://art-and-craft-store-server-delta.vercel.app/crafts', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

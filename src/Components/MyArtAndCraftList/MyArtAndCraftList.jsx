@@ -10,7 +10,7 @@ const MyArtAndCraftList = () => {
     const [crafts, setCrafts] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myArtAndCraft/${user?.userEmail}`)
+        fetch(`https://art-and-craft-store-server-delta.vercel.app/myArtAndCraft/${user?.userEmail}`)
             .then(res => res.json())
             .then(data => {
                 setCrafts(data);

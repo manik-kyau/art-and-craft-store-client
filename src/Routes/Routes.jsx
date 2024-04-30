@@ -21,12 +21,12 @@ const router = createBrowserRouter([
         {
           path:'/',
           element:<Home></Home>,
-          loader:()=> fetch('http://localhost:5000/crafts')
+          loader:()=> fetch('https://art-and-craft-store-server-delta.vercel.app/crafts')
         },
         {
           path:'/craftdetails/:id',
           element:<PrivateRoute><CraftDetails></CraftDetails></PrivateRoute>,
-          loader:()=>fetch('http://localhost:5000/crafts'),
+          loader:()=>fetch('https://art-and-craft-store-server-delta.vercel.app/crafts'),
         },
         {
           path:'/login',
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         {
           path:'/allArt&Craft',
           element:<AllArtAndCrafts></AllArtAndCrafts>,
-          loader:()=> fetch('http://localhost:5000/crafts')
+          loader:()=> fetch('https://art-and-craft-store-server-delta.vercel.app/crafts')
         },
         {
           path:'/updateCraft/:id',
