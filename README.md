@@ -13,7 +13,8 @@ The following feature are alailable in ArtGallery Project:
 Category name is "Painting and Drawing"
 
 
-### Project Live Link :
+
+
 
 
 ### Used Packages for the challenges task.
