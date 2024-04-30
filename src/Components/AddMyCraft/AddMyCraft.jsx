@@ -9,7 +9,6 @@ const AddMyCraft = ({ craft, crafts, setCrafts }) => {
     const { _id, itemName, customization, time, photo, price, rating, stockstatus, } = craft;
 
     const handleDelete = (_id) => {
-        // console.log("object",id);
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",

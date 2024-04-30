@@ -1,4 +1,4 @@
-import React from 'react';
+
 import G1 from '../../assets/images/g1.jpg'
 import G2 from '../../assets/images/g2.jpg'
 import G11 from '../../assets/images/g11.jpg'

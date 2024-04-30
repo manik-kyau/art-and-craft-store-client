@@ -12,7 +12,6 @@ const CraftDetails = () => {
     const singleCraft = totalCraft.find(data => data._id == id);
     const { itemName, subName, customization, description, photo, price, rating, stockstatus, time, userEmail, userName } = singleCraft;
 
-    // console.log(singleCraft);
     return (
         <div className='my-12'>
             <Helmet>

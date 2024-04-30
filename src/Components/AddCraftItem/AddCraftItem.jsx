@@ -9,7 +9,6 @@ import { Fade } from 'react-awesome-reveal';
 const AddCraftItem = () => {
 
     const { user } = useContext(AuthContext);
-    // console.log(user);
 
     const handleCustomization = (event) => {
         console.log(event.target.value);
