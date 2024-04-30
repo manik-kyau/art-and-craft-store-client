@@ -14,7 +14,7 @@ const Team = () => {
                 <div className=" p-4 mx-auto space-y-10 my-0">
                     <Fade direction='right'>
                         <div className="space-y-4 text-center">
-                            <h3 className="text-2xl font-bold leading-none sm:text-5xl">Meet our team</h3>
+                            <h3 className="text-[40px] font-bold leading-none sm:text-5xl">Meet our team</h3>
                             <p className="max-w-2xl dark:text-gray-600 mx-auto">At a assumenda quas cum earum ut itaque commodi saepe rem aspernatur quam natus quis nihil quod, hic explicabo doloribus magnam neque, exercitationem eius sunt!</p>
                         </div>
                     </Fade>

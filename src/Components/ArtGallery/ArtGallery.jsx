@@ -15,7 +15,7 @@ const ArtGallery = () => {
         <div>
             <div className='text-center space-y-4'>
                 <h2 className='text-[40px] font-bold'>Art And Craft Gallery</h2>
-                <p className='w-2/3 mx-auto text-base font-semibold'>An Art and Craft Gallery is a space dedicated to showcasing a diverse range of artistic expressions, from traditional paintings and sculptures to contemporary installations and craftworks. These galleries often serve as vibrant hubs for cultural exchange, creativity, and appreciation of the arts.</p>
+                <p className='w-full md:w-2/3 mx-auto text-base font-semibold'>An Art and Craft Gallery is a space dedicated to showcasing a diverse range of artistic expressions, from traditional paintings and sculptures to contemporary installations and craftworks. These galleries often serve as vibrant hubs for cultural exchange, creativity, and appreciation of the arts.</p>
             </div>
             <section className="py-6 dark:bg-gray-100 dark:text-gray-900">
                 <div className=" grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
