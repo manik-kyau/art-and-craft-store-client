@@ -19,7 +19,6 @@ const Login = () => {
     // sign in with Google
     const googleProvider = new GoogleAuthProvider();
     const handleGooglesignIn = () => {
-        // console.log('google mama is comming');
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 const googleUser = result.user;
@@ -48,12 +47,11 @@ const Login = () => {
 
                 // Navigate after login
                 navigate(location?.state ? location.state : '/');
-                // toast.success('Login successfully done..');
                 Swal.fire({
                     title: 'success!',
                     text: 'User Login Successfully Done with Github.',
                     icon: 'success',
-                    confirmButtonText: 'Ok'
+                    confirmButtonText: 'cool'
                 })
 
             })

@@ -19,7 +19,6 @@ const MyArtAndCraftList = () => {
 
     // filter single user art
     const remaining = crafts.filter(craf => craf.userEmail == user.email);
-    // setUserCraft(remaining)
 
     const handleChange = (event) => {
         // console.log(event.target.value);
