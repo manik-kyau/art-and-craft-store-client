@@ -7,19 +7,13 @@ import Team from '../Team/Team';
 import ArtGallery from '../ArtGallery/ArtGallery';
 import { Fade } from 'react-awesome-reveal';
 import SubCategory from '../SubCategory/SubCategory';
-// swiper 
-import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/free-mode';
-import { FreeMode, Pagination } from 'swiper/modules';
 
 const Home = () => {
     const loadedCraft = useLoaderData();
     return (
         <>
             <Helmet>
-                <title>ZeroArtGallery | Home</title>
+                <title>ArtGallery | Home</title>
             </Helmet>
             <div className='my-12'>
                 <Banner></Banner>
