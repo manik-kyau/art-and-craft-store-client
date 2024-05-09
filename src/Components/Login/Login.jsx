@@ -78,7 +78,7 @@ const Login = () => {
                     title: 'success!',
                     text: 'User Login Successfully Done.',
                     icon: 'success',
-                    confirmButtonText: 'Ok'
+                    confirmButtonText: 'Cook'
                 })
             })
             .catch(error => {

@@ -28,6 +28,9 @@ const Register = () => {
 
         // Reset error message
         setRegisterError('');
+        setNameError('');
+        setEmailError('');
+        setPhotoError('');
 
         if (password.length < 6) {
             setRegisterError('Password should be at least 6 characters or longer.');
@@ -66,8 +69,8 @@ const Register = () => {
                     displayName: name,
                     photoURL: photo
                 })
-                    .then(() => console.log('profile updated'))
-                    .catch(error => console.log(error))
+                .then(() => console.log('profile updated'))
+                .catch(error => console.log(error))
 
                 Swal.fire({
                     title: 'success!',

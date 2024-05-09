@@ -45,10 +45,10 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-            .then(result => {
-                console.log(result.user);
-            })
-            .catch(error => console.log(error))
+        .then(result => {
+            console.log(result.user);
+        })
+        .catch(error => console.log(error))
     }
 
     const handleToggle = e => {
