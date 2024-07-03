@@ -19,7 +19,7 @@ const UpdateCraft = () => {
                 setCraft(data)
                 console.log(data);
             })
-    }, [id])
+    },[id])
 
     const { itemName, subName, customization, description, photo, price, rating, stockstatus, time } = craft;
     console.log(price, time);

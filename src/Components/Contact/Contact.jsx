@@ -11,7 +11,7 @@ const Contact = () => {
             </Helmet>
             <Fade direction='left'>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center py-4 my-8 bg-[#F4F3F0] rounded-md text-[#131313]"
-                >About Us</h2>
+                >Contact Us</h2>
             </Fade>
             <Fade direction='right'>
                 <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-12 px-8 bg-[#F4F3F0] py-16 mx-auto rounded-lg  md:pr-12 lg:pr-16 xl:pr-32 dark:bg-gray-100 dark:text-gray-800 my-12">

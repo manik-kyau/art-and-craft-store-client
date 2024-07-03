@@ -113,7 +113,6 @@ const AddCraftItem = () => {
                                         <option className='bg-white text-black' value="Yes"> Yes</option>
                                         <option className='bg-white text-black' value="No"> No</option>
                                     </select>
-                                    {/* <input type="text" name='customization' placeholder="Customization " required className="block w-full outline-none rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:dark:ring-violet-600 p-2 dark:bg-gray-100 border mt-1" /> */}
                                 </label>
                                 <label className="block w-full">
                                     <span className="mb-1 text-lg font-semibold">Stock Status</span>
